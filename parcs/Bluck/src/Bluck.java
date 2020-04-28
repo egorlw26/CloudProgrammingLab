@@ -34,7 +34,7 @@ public class Bluck {
     }
 
     public static String fromFile(String filename) throws Exception {
-        String out = Files.readString(Paths.get(filename));
+        String out = new String(Files.readAllBytes(Paths.get(filename)));
         return out;
     }
 }

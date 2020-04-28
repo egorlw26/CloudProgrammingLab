@@ -8,7 +8,7 @@ public class Bluck {
         curtask.addJarFile("WordFinder.jar");
         String fileAsString = fromFile(curtask.findFile("input"));
 
-        String firstHalf = fileAsString.substring(0, (fileAsString.length()/2));
+        String firstHalf = fileAsString.substring(0, (fileAsString.length())/2);
         String secondHalf = fileAsString.substring((fileAsString.length())/2);
 
         AMInfo info1 = new AMInfo(curtask, null);

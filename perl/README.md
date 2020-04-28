@@ -1,0 +1,32 @@
+## Perl scripts for Unix
+
+- [x] date util
+- [x] ls util
+- [x] pwent util
+- [x] time util
+- [x] env util
+- [x] grep util
+- [x] ping util
+- [x] kill util
+- [x] xargs util
+- [x] nslookup util
+- [x] hexdump util
+- [x] sort util
+- [x] md5sum util
+- [x] curl util
+- [x] factor util (multithreaded)
+- [x] mail util (via sendmail)
+- [x] ps util (external call)
+- [x] JSON pretty printer
+- [x] show pid, uid, gid
+- [x] Signal handling
+- [x] Recursively traverse directory
+- [x] Count files in parallel (multiprocess)
+- [x] IPC via named pipe
+- [x] TCP multi-server
+- [x] TCP client
+- [x] Broadcast UDP diagram
+- [x] UNIX domain socket listener
+- [x] FTP client
+- [x] Archive to .tar.gz
+- [x] Make HTTP POST request

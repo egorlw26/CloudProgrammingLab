@@ -1,0 +1,22 @@
+[submodule "db/test_db"]
+	path = db/test_db
+	url = https://github.com/datacharmer/test_db.git
+	ignore = dirty
+[submodule "it"]
+	path = it
+	url = git@github.com:lionell/pgapps.git
+[submodule "ai"]
+	path = ai
+	url = git@github.com:lionell/smart-pacmans.git
+[submodule "sys_prog/monkey-in-java"]
+	path = sys_prog/monkey-in-java
+	url = git@github.com:lionell/monkey-in-java.git
+[submodule "parallel_prog"]
+	path = parallel_prog
+	url = git@github.com:lionell/pagerank.git
+[submodule "crypto"]
+	path = crypto
+	url = git@github.com:lionell/pollard.git
+[submodule "math_logic"]
+	path = math_logic
+	url = git@github.com:lionell/sequential-method.git

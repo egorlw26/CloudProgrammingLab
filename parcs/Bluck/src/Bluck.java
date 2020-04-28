@@ -1,25 +1,35 @@
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
-import java.io.File;
 import parcs.*;
 
 public class Bluck {
     public static void main(String[] args) throws Exception {
         task curtask = new task();
         curtask.addJarFile("WordFinder.jar");
-        String n = fromFile(curtask.findFile("input"));
+        String fileAsString = fromFile(curtask.findFile("input"));
 
-        AMInfo info = new AMInfo(curtask, null);
-        point p = info.createPoint();
-        channel c = p.createChannel();
-        p.execute("WordFinder");
-        c.write(n);
+        String firstHalf = fileAsString.substring(0, (fileAsString.length()/2));
+        String secondHalf = fileAsString.substring((fileAsString.length())/2);
+
+        AMInfo info1 = new AMInfo(curtask, null);
+        point p1 = info1.createPoint();
+        channel c1 = p1.createChannel();
+        p1.execute("WordFinder");
+        c1.write(firstHalf);
+
+        AMInfo info2 = new AMInfo(curtask, null);
+        point p2 = info2.createPoint();
+        channel c2 = p2.createChannel();
+        p2.execute("WordFinder");
+        c2.write(secondHalf);
 
         System.out.println("Waiting for result...");
-        System.out.println("Result: " + c.readLong());
+        long first = c1.readLong();
+        long second = c2.readLong();
+        long result = first + second;
+        System.out.println("Result from first worker: "+first);
+        System.out.println("Result from second worker: "+second);
+        System.out.println("Result: " + result);
         curtask.end();
     }
 
